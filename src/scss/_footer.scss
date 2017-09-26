@@ -1,0 +1,25 @@
+.footer-contact-container {
+    text-align: center;
+    background-color: $mediumGray;
+    padding: 60px 16px;
+    h2,
+    h3 {
+        font-weight: 400;
+    }
+}
+.site-footer {
+    background-color: $primaryColor;
+    a {
+        color: #fff;
+    }
+    h3 {
+        color: #fff;
+        margin: 0;
+    }
+    .flex-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+    }
+}

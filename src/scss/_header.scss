@@ -1,0 +1,82 @@
+.site-header {
+    background-color: $mediumGray;
+
+    // Logo
+    .logo {
+        position: relative;
+        width: 273px;
+        z-index: 99996;
+        a {
+            max-width: 100%;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(black,0.2);
+            padding: 94px 28px 28px;
+            display: block;
+        }
+    }
+}
+.flex-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-block {
+    h3 {
+        color: #fff;
+        margin: 0;
+    }
+    a {
+        color: #fff;
+
+    }
+    .request {
+        text-align: right;
+        padding-bottom: 34px;
+        button {
+            position: relative;
+            top: -10px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 26px;
+            background-color: #fff;
+            font-size: 18px;
+            color: $mediumGray;
+            padding: 20px 42px 10px 42px;
+            opacity: 1;
+            transition: opacity 0.25s ease-in-out;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+    .phone {
+        padding-bottom: 24px;
+    }
+
+}
+
+
+.mast {
+    position: relative;
+    overflow: hidden;
+    .mast-overlay {
+        position: absolute;
+        left: 50%;
+        bottom: 5%;
+        transform: translateX(-50%);
+        color: #fff;
+    }
+    h1 {
+        // font-size: 2.65rem;
+        color: #fff;
+        margin-bottom: 2rem;
+    }
+    h2,
+    p {
+        margin-bottom: 1.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
