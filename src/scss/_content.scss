@@ -1,13 +1,13 @@
 // first section of page
 .lead-in {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    > h1 {
-        margin-bottom: 32px;
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+    h1 {
+        margin-bottom: 3.125rem;
     }
-    > p {
+    div > p {
         margin-bottom: 24px;
-        font-size: 25px;
+        font-size: 1.5625rem;
         &:last-child {
             margin-bottom: 0;
         }
@@ -19,7 +19,7 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: stretch;
-    margin-top: 42px;
+    margin-top: 2.625rem;
     .card {
         max-width: 340px;
         flex: 1 0 33.3%;
@@ -30,7 +30,7 @@
     .card-icon {
         display: block;
         margin: auto;
-        padding: 16px;
+        padding: 16px 16px 50px;
     }
     .card-block {
         text-align: center;
@@ -45,7 +45,7 @@
         margin-bottom: 0;
         padding: 0 16px;
         font-weight: bold;
-        font-size: 1.375rem; // 22px
+        font-size: 1.5625rem;
         color: $primaryColor;
     }
 }
@@ -156,4 +156,27 @@
     padding: 40px;
     margin-top: 40px;
     margin-bottom: 90px;
+}
+
+@media screen and (max-width: 1199px) {
+    .hp-cards {
+        .card {
+            max-width: 280px;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .hp-cards {
+        .card {
+            max-width: 100%;
+            flex-basis: 100%;
+            box-shadow: none;
+            &:not(:last-child) {
+                padding-bottom: 32px;
+                margin-bottom: 32px;
+                border-bottom: 1px solid #999;
+            }
+        }
+    }
 }

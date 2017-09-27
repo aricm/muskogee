@@ -42,17 +42,14 @@ select {
     input[type="search"],
     textarea {
         background-color: #fff;
-        border-color: $mediumGray;
-        border-width: 2px;
+        border-color: $darkGray;
+        border-width: 1px;
         color: $textColor;
         max-width: 100%;
         font-size: 1rem; // 16px
     }
-    // option {
-    //     color: $;
-    // }
     ::-webkit-input-placeholder {
-        color: $mediumGray;
+        color: $lightGray;
     }
     textarea {
         min-height: 6rem;
@@ -74,10 +71,7 @@ select {
             flex-basis: 0;
         }
         .btn {
-            font-family: "Oswald", sans-serif;
             font-weight: bold;
-            padding-left: 2.5rem;
-            padding-right: 2.5rem;
             margin-left: 16px;
         }
         > .wpcf7-form-control-wrap {
@@ -120,7 +114,6 @@ select {
     }
     .submit-container {
         .btn {
-            font-family: "Oswald", sans-serif;
             font-weight: bold;
             margin-top: 1.5rem;
             padding-left: 2.5rem;
@@ -163,7 +156,6 @@ select {
         flex: 1 0 100%;
         margin-top: 2rem;
         .btn {
-            font-family: "Oswald", sans-serif;
             font-weight: bold;
             padding: 0.75rem 3rem;
             font-size: 1.4rem;
@@ -201,16 +193,9 @@ select {
     input[type="search"],
     textarea {
         font-size: 1.15rem;
-        // border-width: 2px;
-        // border-color: #fff;
-        // background-color: #fff;
-        // color: $textColor;
-    }
-    option {
-        color: $darkGray;
     }
     ::-webkit-input-placeholder {
-        // color: #fff;
+        color: $lightGray;
     }
     div.wpcf7-response-output {
         margin: 2rem auto;
@@ -220,7 +205,7 @@ select {
 @media screen and (max-width: 1199px) {
     .footer-form {
         p {
-            flex-basis: 23%
+            flex-basis: 25%
         }
         > .wpcf7-form-control-wrap { // recaptcha container
             margin: 24px 1050px;
@@ -229,7 +214,7 @@ select {
             flex: 0 1 100%;
         }
         .submit-container {
-            margin-top: 0;
+            // margin-top: 0;
             flex: 0;
         }
     }

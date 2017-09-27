@@ -40,42 +40,43 @@
     </div>
 </div>
 
+<div id="refContainer" class="container" style="visibility: hidden;"></div>
 <div id="openNavOverlay"></div>
 <div id="closeNav" class="close-nav">Close <i class="fa fa-times"></i></button></div>
 <?php wp_footer(); ?>
 
 <script>
-var isSticky = false;
-var siteHeader = jQuery(".site-header");
-var mainNav = jQuery("#mainNav");
+// var isSticky = false;
+// var siteHeader = jQuery(".site-header");
+// var mainNav = jQuery("#mainNav");
 
-jQuery(document).on("scroll", function() {
-    if ( jQuery(document).scrollTop() > 156 ) {
-        if(!isSticky) {
-            jQuery("body").addClass("sticky-header");
-            isSticky = true;
-        }
-    } else {
-        if(isSticky) {
-            jQuery("body").removeClass("sticky-header");
-            isSticky = false;
-        }
-    }
-});
+// jQuery(document).on("scroll", function() {
+//     if ( jQuery(document).scrollTop() > 156 ) {
+//         if(!isSticky) {
+//             jQuery("body").addClass("sticky-header");
+//             isSticky = true;
+//         }
+//     } else {
+//         if(isSticky) {
+//             jQuery("body").removeClass("sticky-header");
+//             isSticky = false;
+//         }
+//     }
+// });
 
-jQuery('#navToggle, #closeNav, #openNavOverlay, .get-quote').on('click', function() {
-    // console.log(jQuery(this));
-    // return false;
-    if(jQuery(this).context.className != 'get-quote') {
-        jQuery(mainNav).toggleClass('open');
-        jQuery('#closeNav').toggleClass('open');
-        jQuery('body').toggleClass('no-scroll');
-    } else {
-        jQuery(mainNav).removeClass('open');
-        jQuery('#closeNav').removeClass('open');
-        jQuery('body').removeClass('no-scroll');
-    }
-});
+// jQuery('#navToggle, #closeNav, #openNavOverlay').on('click', function() {
+//     // console.log(jQuery(this));
+//     // return false;
+//     if(jQuery(this).context.className != 'get-quote') {
+//         jQuery(mainNav).toggleClass('open');
+//         jQuery('#closeNav').toggleClass('open');
+//         jQuery('body').toggleClass('no-scroll');
+//     } else {
+//         jQuery(mainNav).removeClass('open');
+//         jQuery('#closeNav').removeClass('open');
+//         jQuery('body').removeClass('no-scroll');
+//     }
+// });
 </script>
 
 </body>

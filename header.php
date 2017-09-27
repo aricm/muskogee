@@ -11,7 +11,7 @@
 <body <?php body_class(); ?>>
 
 <header class="site-header">
-    <div class="container flex-header">
+    <div id="flexHeader" class="container flex-header">
 
         <div class="logo"><a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo-muskogee.png" alt=""></a></div>
 
@@ -21,7 +21,7 @@
             </div>
             <div class="phone">
                 <h3>
-                    For Information Call
+                    <span>For Information Call</span>
                     <a href="tel:15099799797">(509) 979-9797</a>
                 </h3>
             </div>
@@ -31,7 +31,12 @@
 
     <div class="header-nav">
         <div class="container">
-            <a href="javascript:void(0);" id="navToggle" class="nav-toggle"><i class="fa fa-bars"></i></a>
+            <div class="sticky-logo"><a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo-sticky.png" alt=""></a></div>
+            <div class="mobile-icons">
+                <a href="tel:15099799797" class="nav-phone"><i class="fa fa-phone"></i></a>
+                <a href="#" id="navToggle" class="nav-contact"><i class="fa fa-envelope"></i></a>
+                <a href="javascript:void(0);" id="navToggle" class="nav-toggle"><i class="fa fa-bars"></i></a>
+            </div>
             <nav id="mainNav" class="main-nav" role="navigation">
                <?php wp_nav_menu( array( 'theme_location' => 'main', 'container' => '' ) ); ?>
             </nav>

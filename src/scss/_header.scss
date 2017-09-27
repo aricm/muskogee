@@ -1,9 +1,10 @@
 .site-header {
     background-color: $mediumGray;
 
-    // Logo
+    // Logop
     .logo {
         position: relative;
+        top: -60px;
         width: 273px;
         z-index: 99996;
         a {
@@ -11,7 +12,7 @@
             position: absolute;
             background-color: #fff;
             box-shadow: 0 4px 12px rgba(black,0.2);
-            padding: 94px 28px 28px;
+            padding: 150px 28px 28px;
             display: block;
         }
     }
@@ -19,19 +20,19 @@
 .flex-header {
     display: flex;
     justify-content: space-between;
+    height: 145px;
 }
 
 .header-block {
+    text-align: right;
     h3 {
         color: #fff;
         margin: 0;
     }
     a {
         color: #fff;
-
     }
     .request {
-        text-align: right;
         padding-bottom: 34px;
         button {
             position: relative;
@@ -56,6 +57,62 @@
 
 }
 
+.sticky-logo {
+    // display: none;
+    position: fixed;
+    left: -9999rem;
+    a {
+        display: block;
+        opacity: 0;
+        // background-color: #fff;
+        padding-right: 16px;
+        margin-right: 8px;
+        transition: opacity 0.2s ease-in-out;
+    }
+}
+
+.sticky-header {
+    .header-nav {
+        position: fixed;
+        z-index: 99997;
+        left: 0;
+        top: 0;
+        width: 100%;
+        box-shadow: 0 3px 20px rgba(black,0.2);
+        // transition: max-height 0.15s ease-in-out;
+        > div { // .container
+            // width: 100%;
+            // padding: 0;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    .flex-header {
+        .logo {
+            display: none;
+        }
+        .header-block {
+            display: none;
+            .inner-block {
+                // display: none;
+            }
+        }
+    }
+    .sticky-logo {
+        // display: block;
+        position: static;
+        a {
+            opacity: 1;
+            transition: opacity 0.2s ease-in-out
+        }
+    }
+    .header-nav {
+        height: 50px; // IE needs this
+    }
+    .main-nav>ul>li {
+        // line-height: 50px;
+    }
+}
 
 .mast {
     position: relative;
@@ -71,6 +128,9 @@
         // font-size: 2.65rem;
         color: #fff;
         margin-bottom: 2rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
     h2,
     p {
@@ -105,5 +165,212 @@
         height: 100%;
         background: #000;
         z-index: -1;
+    }
+}
+
+.header-nav {
+    background-color: $primaryColor;
+    .main-nav,
+    .mobile-icons {
+        overflow: hidden;
+        a {
+            height: 50px;
+            line-height: 50px;
+        }
+        .nav-phone {
+            padding-top: 3px;
+        }
+    }
+    > div {
+        display: flex;
+        justify-content: flex-end;
+        // transition: all 0.2s;
+    }
+}
+
+.mobile-icons {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    a {
+        display: block;
+        margin-left: 1px;
+        padding: 0 16px;;
+        background: none;
+        font-size: 40px;
+        color: #fff;
+        transition: all 0.25s ease-in-out;
+        &:focus,
+        &:hover {
+            background: #fff;
+            color: $primaryColor;
+        }
+    }
+    .nav-phone,
+    .nav-contact {
+        display: none;
+    }
+}
+
+.close-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 45px;
+    line-height: 45px;
+    cursor: pointer;
+    z-index: 99999;
+    background-color: darken($primaryColor,10%);
+    border-bottom: 1px solid darken($primaryColor,15%);
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(-400px);
+    transition: transform 0.15s ease-in-out;
+    &.open {
+        max-width: 100%;
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 1299px) {
+    .page-mast {
+        .mast-overlay {
+            img {
+                max-width: 350px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .site-header {
+        .logo {
+            width: 223px;
+        }
+    }
+    .front-page-mast {
+        h1 {
+            font-size: 3.125rem;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+    // Let black bg come through a bit to make sure white
+    // text is legible
+        .wp-post-image {
+            opacity: 0.5;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    body:not(.sticky-header) {
+        .site-header {
+            .logo {
+                top: -60px;
+            }
+        }
+    }
+    .mast {
+        background-color: $secondaryColor;
+        .mast-overlay {
+            position: relative;
+            left: auto;
+            bottom: auto;
+            transform: translate(0,0);
+            padding: 40px 15px;
+            h1 {
+                font-size: 1.75rem;
+            }
+        }
+    }
+    .page-mast {
+        h1:last-child {
+            margin-bottom: 0;
+        }
+        .mast-overlay {
+            img {
+                max-width: 60%;
+            }
+        }
+    }
+    .front-page-mast {
+        h1 {
+            font-size: 2.625rem !important;
+        }
+        h2 {
+            font-size: 2rem !important;
+        }
+        .wp-post-image {
+            opacity: 1;
+        }
+    }
+    .mobile-icons {
+        display: flex;
+    }
+    .close-nav {
+        display: block;
+    }
+    .header-nav {
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .site-header {
+        .container {
+            width: 100%;
+            padding: 0;
+        }
+    }
+    .flex-header {
+        height: 176px;
+    }
+    .header-block {
+        padding-right: 24px;
+        h3 {
+            font-size: 2.25rem;
+            span {
+                display: block; // force text onto two lines
+            }
+        }
+    }
+    .mast {
+        text-align: center;
+    }
+    .front-page-mast {
+        .btn-mast {
+            margin-top: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .site-header {
+        .logo {
+            width: 160px;
+            top: -40px !important;
+            a {
+                padding: 60px 16px 16px 16px;
+            }
+        }
+    }
+    .flex-header {
+        height: 60px;
+    }
+    .header-block {
+        display: none;
+    }
+    .mobile-icons {
+        .nav-phone,
+        .nav-contact {
+            display: block;
+        }
     }
 }

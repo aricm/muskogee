@@ -18,8 +18,28 @@
     }
     .flex-footer {
         display: flex;
+        flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
         padding: 12px 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .site-footer {
+        text-align: center;
+        .flex-footer {
+            padding-top: 32px;
+            .f-item {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+            .logo {
+                order: 2;
+            }
+            .phone {
+                margin-bottom: 32px;
+            }
+        }
     }
 }

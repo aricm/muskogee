@@ -1,14 +1,8 @@
-.header-nav {
-    background-color: $primaryColor;
-}
-
 .main-nav {
     text-align: right;
     font-size: 18px;
     a {
         display: block;
-        height: 50px;
-        line-height: 50px;
         text-transform: uppercase;
         padding: 0 24px;
         background-color: transparent;
@@ -18,6 +12,9 @@
             background-color: #fff;
             color: $primaryColor;
         }
+    }
+    .home-link {
+        display: none;
     }
     ul {
         list-style: none;
@@ -30,8 +27,4 @@
     li {
         // display: inline-block;
     }
-}
-
-.nav-toggle {
-    display: none;
 }

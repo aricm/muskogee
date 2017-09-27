@@ -47,7 +47,7 @@ add_action( 'after_setup_theme', 'ngmvp_setup' );
  * Enqueue scripts and styles.
  */
 function ngmvp_scripts() {
-    // wp_enqueue_script( 'ngacustom', get_bloginfo('template_url') . '/js/custom.js', 'jquery', '1.0', true );
+    wp_enqueue_script( 'ngacustom', get_bloginfo('template_url') . '/js/custom.js', 'jquery', '1.0', true );
     wp_enqueue_style( 'ngmvp_main', get_bloginfo('template_url') . '/main.css', array('bootstrap'), false );
     wp_enqueue_style( 'fontawesome', get_bloginfo('template_url') . '/css/font-awesome.min.css' );
 }
