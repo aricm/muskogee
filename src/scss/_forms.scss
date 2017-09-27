@@ -1,0 +1,331 @@
+select,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+textarea {
+    display: block;
+    width: 100%;
+    height: 3rem;
+    border-radius: 0px;
+    box-shadow: none;
+    background-image: none;
+    // -webkit-appearance: none;
+    font-family: inherit;
+    font-size: 0.875rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+
+    background-color: #fff;
+    border: 1px solid #eeeeee;
+    color: rgba(0, 0, 0, 0.75);
+}
+select {
+    padding: 0.3125rem;
+}
+.textarea-lg {
+    height: 6rem;
+}
+::-webkit-input-placeholder {
+    color: lighten($darkGray,10%);
+}
+
+.contact-page-form {
+    select,
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="password"],
+    input[type="number"],
+    input[type="search"],
+    textarea {
+        background-color: #fff;
+        border-color: $mediumGray;
+        border-width: 2px;
+        color: $textColor;
+        max-width: 100%;
+        font-size: 1rem; // 16px
+    }
+    // option {
+    //     color: $;
+    // }
+    ::-webkit-input-placeholder {
+        color: $mediumGray;
+    }
+    textarea {
+        min-height: 6rem;
+    }
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    p {
+        min-width: 50%;
+        flex: 1 0 50%;
+        padding: 0 16px;
+    }
+    .submit-container {
+        display: flex;
+        flex-flow: row wrap;
+        p {
+            margin: 0;
+            padding: 0;
+            flex-basis: 0;
+        }
+        .btn {
+            font-family: "Oswald", sans-serif;
+            font-weight: bold;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+            margin-left: 16px;
+        }
+        > .wpcf7-form-control-wrap {
+            // outline: 1px solid #000;
+            width: 206px;
+            height: 51px;
+            overflow: hidden;
+        }
+        .page-recaptcha {
+            transform: scale(0.68);
+            transform-origin: 0px 0px;
+        }
+    }
+    .wpcf7-not-valid-tip {
+        color: #ff0;
+    }
+}
+
+.popover-form {
+    width: 90%;
+    margin: auto;
+    select,
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="password"],
+    input[type="number"],
+    input[type="search"],
+    textarea {
+        height: 2.6rem;
+        margin-top: 0.25rem;
+        background-color: $lightGray;
+        border-color: transparent;
+        border-width: 1px;
+        color: $textColor;
+        font-size: 1rem; // 16px
+    }
+    textarea {
+        min-height: 4rem;
+    }
+    .submit-container {
+        .btn {
+            font-family: "Oswald", sans-serif;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+        }
+        > .wpcf7-form-control-wrap {
+            // outline: 1px solid #000;
+            width: 206px;
+            height: 51px;
+        }
+        .popover-recaptcha {
+            transform: scale(0.68);
+            transform-origin: 0px 0px;
+        }
+    }
+    label {
+        display: block;
+        font-size: 0.9rem;
+        color: $darkGray;
+    }
+}
+
+.footer-form {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    p,
+    > .wpcf7-form-control-wrap {
+        flex: 1 0 0%;
+        padding: 0.25rem;
+        margin-bottom: 0;
+    }
+    .input-name,
+    .input-email {
+        flex-basis: 50%;
+    }
+    .submit-container {
+        flex: 1 0 100%;
+        margin-top: 2rem;
+        .btn {
+            font-family: "Oswald", sans-serif;
+            font-weight: bold;
+            padding: 0.75rem 3rem;
+            font-size: 1.4rem;
+        }
+        // submit button container inserted by CF7
+        > p {
+            flex: 0 0 27%;
+        }
+    }
+    // captcha wrapper inserted by contact form 7
+    > .wpcf7-form-control-wrap {
+        // outline: 1px solid black;
+        flex-basis: 0;
+        position: relative;
+        width: 194px;
+        height: 49px;
+        padding: 0;
+        margin: 0 0 0 5px;
+    }
+    // reCaptcha
+    .footer-recaptcha {
+        transform: scale(0.64);
+        transform-origin: 0 0;
+    }
+    iframe {
+        position: relative;
+        // bottom: 16px;
+    }
+    select,
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="password"],
+    input[type="number"],
+    input[type="search"],
+    textarea {
+        font-size: 1.15rem;
+        // border-width: 2px;
+        // border-color: #fff;
+        // background-color: #fff;
+        // color: $textColor;
+    }
+    option {
+        color: $darkGray;
+    }
+    ::-webkit-input-placeholder {
+        // color: #fff;
+    }
+    div.wpcf7-response-output {
+        margin: 2rem auto;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .footer-form {
+        p {
+            flex-basis: 23%
+        }
+        > .wpcf7-form-control-wrap { // recaptcha container
+            margin: 24px 1050px;
+            width: 193px;
+            outline: none;
+            flex: 0 1 100%;
+        }
+        .submit-container {
+            margin-top: 0;
+            flex: 0;
+        }
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    .contact-page-form {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        p {
+            flex-basis: 50%;
+            padding: 0 0.5rem;
+            &.textarea {
+                flex-basis: 100%;
+            }
+        }
+        .submit-container {
+            padding: 0 0.5rem;
+            flex-basis: 100%;
+        }
+
+        select,
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="password"],
+        input[type="number"],
+        input[type="search"],
+        textarea {
+            max-width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer-contact-container {
+        .container {
+            width: 100% !important;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    .footer-form {
+        p {
+            flex-basis: 47%;
+        }
+    }
+}
+
+@media screen and (max-width: 459px) {
+    .submit-container {
+        p {
+            flex-basis: 100% !important;
+            text-align: center;
+        }
+    }
+
+    .footer-form {
+        p {
+            flex-basis: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 412px) {
+    .footer-form {
+        > .wpcf7-form-control-wrap {
+            // margin: 32px 24px 0 0;
+            // outline: none;
+        }
+        .submit-container {
+            // flex: 1 0 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 445px) {
+    .contact-page-form {
+        .submit-container {
+            justify-content: center;
+            padding: 0;
+            .btn {
+                margin-top: 1.5rem;
+            }
+            > .wpcf7-form-control-wrap {
+                margin-left: 17px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 491px) {
+    .contact-page-form {
+        > p {
+            flex-basis: 100%;
+        }
+    }
+}

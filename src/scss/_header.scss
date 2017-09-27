@@ -74,9 +74,36 @@
     }
     h2,
     p {
+        color: #fff;
         margin-bottom: 1.5rem;
         &:last-child {
             margin-bottom: 0;
         }
+    }
+}
+
+.front-page-mast {
+    h1 {
+        font-size: 4.688rem; // 75px
+    }
+    h2 {
+        font-size: 2.5rem; // 40px
+        &:last-child {
+            margin-bottom: none;
+        }
+        &.d-inline-block {
+            margin-bottom: 0;
+            vertical-align: middle;
+        }
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: #000;
+        z-index: -1;
     }
 }

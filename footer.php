@@ -4,8 +4,7 @@
     <div class="container">
         <h2 class="inverse">Don't Miss Out On This One Of A Kind Opportunity.</h2>
         <h3 class="inverse">Register Today For More Information.</h3>
-    <?php // echo do_shortcode( '[contact-form-7 id="258" title="Footer Form" html_class="footer-form"]' ); ?>
-    -- form --
+    <?php echo do_shortcode( '[contact-form-7 id="48" title="Footer Form" html_class="footer-form"]' ); ?>
     </div>
 </div>
 

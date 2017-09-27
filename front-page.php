@@ -5,28 +5,24 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-        <div class="mast page-mast">
+        <div class="mast front-page-mast">
             <?php
                 if( has_post_thumbnail() ) {
                     the_post_thumbnail();
                 } else {
-                    // echo '<img src="'. home_url() . '/wp-content/uploads/2017/08/mast-products.jpg" />';
+                    echo '<img src="'. home_url() . '/wp-content/uploads2017/09/front-page-mast1.jpg" />';
                 }
 
-                // $mast_title       = get_post_meta( get_the_ID(), 'mast_title', true );
-                // $mast_description = get_post_meta( get_the_ID(), 'mast_description', true );
+                $mast_content = get_post_meta( get_the_ID(), 'mast_content', true );
 
-                // if( empty($mast_title) ) {
-                //     $mast_title =  the_title('<h1>', '</h1>', false);
-                // }
+                if( empty($mast_content) ) {
+                    $mast_content =  the_title('<h1>', '</h1>', false);
+                }
             ?>
             <div class="container mast-overlay">
                 <?php
-                    // echo $mast_title;
-
-                    // if( !empty($mast_description) ) {
-                    //     echo wpautop( $mast_description );
-                    // }
+                    echo apply_filters( 'the_content', $mast_content );
+                    // echo wpautop( $mast_content );
                 ?>
             </div>
         </div>
