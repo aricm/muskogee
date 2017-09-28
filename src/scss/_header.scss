@@ -34,20 +34,20 @@
     }
     .request {
         padding-bottom: 34px;
-        button {
+        .btn {
             position: relative;
             top: -10px;
             text-transform: uppercase;
             cursor: pointer;
             border-radius: 26px;
-            background-color: #fff;
+            background: #fff;
             font-size: 18px;
             color: $mediumGray;
             padding: 20px 42px 10px 42px;
-            opacity: 1;
-            transition: opacity 0.25s ease-in-out;
+            transition: all 0.25s ease-in-out;
             &:hover {
-                opacity: 0.8;
+                background: $primaryColor;
+                color: #fff;
             }
         }
     }
@@ -58,16 +58,14 @@
 }
 
 .sticky-logo {
-    // display: none;
     position: fixed;
     left: -9999rem;
     a {
         display: block;
         opacity: 0;
-        // background-color: #fff;
         padding-right: 16px;
         margin-right: 8px;
-        transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.5s ease-in-out;
     }
 }
 
@@ -103,7 +101,7 @@
         position: static;
         a {
             opacity: 1;
-            transition: opacity 0.2s ease-in-out
+            transition: opacity 0.5s ease-in-out
         }
     }
     .header-nav {
@@ -120,7 +118,7 @@
     .mast-overlay {
         position: absolute;
         left: 50%;
-        bottom: 5%;
+        bottom: 15%;
         transform: translateX(-50%);
         color: #fff;
     }
@@ -143,6 +141,9 @@
 }
 
 .front-page-mast {
+    .mast-overlay {
+        bottom: 5%;
+    }
     h1 {
         font-size: 4.688rem; // 75px
     }
@@ -387,6 +388,14 @@
         }
         a {
             font-size: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sticky-header {
+        .sticky-logo {
+            max-width: 190px;
         }
     }
 }

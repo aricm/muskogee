@@ -3,6 +3,7 @@ body {
     font-size: 1.25rem; // 20px
     background-color: #fff;
     color: $textColor;
+    overflow-x: hidden;
 }
 .no-scroll {
     overflow: hidden;
@@ -79,7 +80,8 @@ h1,h2,h3,h4 {
     // release no-scroll above mobile viewport (max-width: 1049px)
     body {
         &.no-scroll {
-            overflow: auto;
+            overflow-y: auto;
+            position: static;
             #openNavOverlay {
                 display: none;
             }

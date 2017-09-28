@@ -17,7 +17,7 @@
 
         <div class="header-block">
             <div class="request">
-                <button type="button" class="btn">Request Information</button>
+                <a href="<?php echo home_url(); ?>/contact/" class="btn">Request Information</a>
             </div>
             <div class="phone">
                 <h3>
@@ -34,10 +34,10 @@
             <div class="sticky-logo"><a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo-sticky.png" alt=""></a></div>
             <div class="mobile-icons">
                 <a href="tel:15099799797" class="nav-phone"><i class="fa fa-phone"></i></a>
-                <a href="#" id="navToggle" class="nav-contact"><i class="fa fa-envelope"></i></a>
+                <a href="<?php echo home_url(); ?>/contact/" class="nav-contact"><i class="fa fa-envelope"></i></a>
                 <a href="javascript:void(0);" id="navToggle" class="nav-toggle"><i class="fa fa-bars"></i></a>
             </div>
-            <nav id="mainNav" class="main-nav" role="navigation">
+            <nav id="mainNav" class="mobile-nav" role="navigation">
                <?php wp_nav_menu( array( 'theme_location' => 'main', 'container' => '' ) ); ?>
             </nav>
         </div>

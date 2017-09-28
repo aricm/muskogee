@@ -1,5 +1,10 @@
 </main>
 
+<?php
+    $postId = get_the_post_id();
+?>
+
+<?php if( $postId != 15 ): ?>
 <div class="container-fluid footer-contact-container">
     <div class="container">
         <h2 class="inverse">Don't Miss Out On This One Of A Kind Opportunity.</h2>
@@ -7,6 +12,7 @@
     <?php echo do_shortcode( '[contact-form-7 id="48" title="Footer Form" html_class="footer-form"]' ); ?>
     </div>
 </div>
+<?php endif; ?>
 
 <footer class="container-fluid site-footer">
     <div class="container">
@@ -45,39 +51,6 @@
 <div id="closeNav" class="close-nav">Close <i class="fa fa-times"></i></button></div>
 <?php wp_footer(); ?>
 
-<script>
-// var isSticky = false;
-// var siteHeader = jQuery(".site-header");
-// var mainNav = jQuery("#mainNav");
-
-// jQuery(document).on("scroll", function() {
-//     if ( jQuery(document).scrollTop() > 156 ) {
-//         if(!isSticky) {
-//             jQuery("body").addClass("sticky-header");
-//             isSticky = true;
-//         }
-//     } else {
-//         if(isSticky) {
-//             jQuery("body").removeClass("sticky-header");
-//             isSticky = false;
-//         }
-//     }
-// });
-
-// jQuery('#navToggle, #closeNav, #openNavOverlay').on('click', function() {
-//     // console.log(jQuery(this));
-//     // return false;
-//     if(jQuery(this).context.className != 'get-quote') {
-//         jQuery(mainNav).toggleClass('open');
-//         jQuery('#closeNav').toggleClass('open');
-//         jQuery('body').toggleClass('no-scroll');
-//     } else {
-//         jQuery(mainNav).removeClass('open');
-//         jQuery('#closeNav').removeClass('open');
-//         jQuery('body').removeClass('no-scroll');
-//     }
-// });
-</script>
 
 </body>
 </html>

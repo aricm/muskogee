@@ -29,8 +29,11 @@
     }
     .card-icon {
         display: block;
-        margin: auto;
+        text-align: center;
         padding: 16px 16px 50px;
+        img {
+            display: inline-block;
+        }
     }
     .card-block {
         text-align: center;
