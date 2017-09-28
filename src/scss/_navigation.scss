@@ -8,10 +8,7 @@
         background-color: transparent;
         color: #fff;
         transition: all 0.2s ease-in-out;
-        &:hover {
-            background-color: #fff;
-            color: $primaryColor;
-        }
+        margin-left: 1px;
     }
     .home-link {
         display: none;
@@ -25,6 +22,10 @@
         margin-left: 1px;
     }
     li {
-        // display: inline-block;
+        a:hover,
+        &.current_page_item a {
+            background-color: #fff;
+            color: $primaryColor;
+        }
     }
 }

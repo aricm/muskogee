@@ -27,7 +27,7 @@
             </div>
         </div>
 
-    <div class="page-content">
+    <div class="page-content front-page-content">
         <?php the_content(); ?>
     </div>
 

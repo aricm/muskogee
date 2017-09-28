@@ -320,6 +320,12 @@
     .header-nav {
         text-align: right;
     }
+    .sticky-header {
+        .nav-phone,
+        .nav-contact {
+            display: inline-block;
+        }
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -327,6 +333,13 @@
         .container {
             width: 100%;
             padding: 0;
+        }
+    }
+    .sticky-header {
+        .sticky-logo {
+            a {
+                padding-left: 16px;
+            }
         }
     }
     .flex-header {
@@ -371,6 +384,9 @@
         .nav-phone,
         .nav-contact {
             display: block;
+        }
+        a {
+            font-size: 30px;
         }
     }
 }

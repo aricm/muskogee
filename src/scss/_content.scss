@@ -167,6 +167,13 @@
 }
 
 @media screen and (max-width: 991px) {
+    .front-page-content {
+        .lead-in {
+            h2 {
+                text-align: center;
+            }
+        }
+    }
     .hp-cards {
         .card {
             max-width: 100%;
