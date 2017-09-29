@@ -89,7 +89,19 @@ select {
         }
     }
     .wpcf7-not-valid-tip {
-        color: #ff0;
+        color: #900;
+        font-size: 14px;
+        padding-top: 6px;
+    }
+    .wpcf7-response-output,
+    .wpcf7-validation-errors {
+        font-size: 14px;
+        margin: 24px auto 0 auto;
+        border-color: lighten(#900,10%);
+        background-color: #900;
+        color: lighten(#900,70%);
+        border-radius: 12px;
+        padding: 8px 16px;
     }
 }
 
@@ -142,7 +154,7 @@ select {
 .footer-form {
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     padding-top: 2rem;
     p,
@@ -150,6 +162,7 @@ select {
         flex: 1 0 0%;
         padding: 4px;
         margin-bottom: 0;
+        text-align: left;
     }
     .input-name,
     .input-email {
@@ -203,7 +216,13 @@ select {
         color: $lightGray;
     }
     div.wpcf7-response-output {
-        margin: 32px auto;
+        margin: 24px auto 0 auto;
+        color: #eee;
+    }
+    .wpcf7-not-valid-tip {
+        color: yellow;
+        font-size: 14px;
+        padding-top: 6px;
     }
 }
 
